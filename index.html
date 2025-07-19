@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👨🏻‍💼My Task Manager</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="main-class">
+      <section class="app-container">
+        <button class="dark">
+          <i class="fa-solid fa-moon fa-2x"></i>
+        </button>
+        <div class="head">
+          <h4>My Task Manager</h4>
+        </div>
+        <div class="inputarea">
+          <div class="taskinput">
+            <input
+              class="text-input"
+              type="text"
+              placeholder="Add a new task..."
+            />
+          </div>
+          <div class="add-button">
+            <button class="add-bt" disabled>Add</button>
+          </div>
+
+          <div class="task-head">
+            <h4>Task</h4>
+          </div>
+
+          <div class="count-badge">
+            <p><span class="counter">0</span> tasks</p>
+          </div>
+        </div>
+
+        <div class="display-area hidden"></div>
+
+        <div class="text-msg hidden">
+          <i
+            class="fa-regular fa-clipboard"
+            style="color: grey; margin-left: 50%"
+          ></i>
+          <h5 style="color: grey; text-align: center">
+            No tasks yet. Add one above!
+          </h5>
+        </div>
+        <hr />
+      </section>
+
+      <section class="clear-section">
+        <button class="clear-bt">Clear completed tasks</button>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
