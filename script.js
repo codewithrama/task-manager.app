@@ -71,6 +71,7 @@ const tasklist = function (task) {
         }
         tasksarray.push(task);
         updateTaskCount();
+        input.value;
       }
     });
 
@@ -84,6 +85,7 @@ const tasklist = function (task) {
       deleteIcon.closest(".task-row").remove();
 
       updateTaskCount();
+      input.value = "";
 
       if (tasksarray.length === 0) {
         displayArea.classList.add("hidden");
@@ -111,11 +113,13 @@ darkbtn.addEventListener("click", function () {
 //add button functionality
 
 addbutton.addEventListener("click", function () {
-  let task = document.querySelector(".text-input").value;
-  tasksarray.push(task.trim());
-  document.querySelector(".text-input").value = "";
-  tasklist(task);
-  updateTaskCount();
+  if (input.value.trim() !== "") {
+    let task = document.querySelector(".text-input").value;
+    tasksarray.push(task.trim());
+    document.querySelector(".text-input").value = "";
+    tasklist(task);
+    updateTaskCount();
+  }
 });
 
 //enter key functionality
