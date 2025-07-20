@@ -151,3 +151,12 @@ clearbutton.addEventListener("click", function () {
   updateTaskCount();
   completetaskarray = []; // ✅ Clear after loop finishes
 });
+
+// Value length
+
+input.addEventListener("input", function () {
+  if (input.value.length > 40) {
+    input.value = input.value.slice(0, 40); // cut to max limit
+  }
+  document.querySelector(".text-counter").textContent = input.value.length;
+});
