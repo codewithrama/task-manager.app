@@ -143,3 +143,28 @@ button:disabled {
   max-height: 300px;
   overflow-y: scroll;
 }
+
+@media screen and (max-width: 600px) {
+  .text-input {
+    width: 90%;
+  }
+
+  .inputarea {
+    grid-template-columns: 1fr;
+  }
+
+  .add-bt {
+    width: 100%;
+  }
+
+  .main-class {
+    padding: 16px;
+    margin: 10px;
+  }
+  /* 
+  .task-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+  } */
+}

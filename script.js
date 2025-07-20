@@ -143,10 +143,11 @@ function updateTaskCount() {
 // When user clicks clear button:
 clearbutton.addEventListener("click", function () {
   for (let completedtask of document.querySelectorAll(".task-row")) {
-    if (completetaskarray.includes(completedtask.innerText)) {
+    if (completetaskarray.includes(completedtask.textContent)) {
       completedtask.remove();
-      updateTaskCount();
-      completetaskarray = [];
     }
   }
+
+  updateTaskCount();
+  completetaskarray = []; // ✅ Clear after loop finishes
 });
